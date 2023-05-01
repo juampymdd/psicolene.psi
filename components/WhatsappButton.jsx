@@ -22,7 +22,6 @@ export const WhatsappButton = () => {
 
   return (
     <div className='flotante-derecha'>
-      <span className={clase}>Consultame por Whatsapp</span>
       <a href={wspLink} target="_blank">
         <button 
           className='wsp bounce-left'
