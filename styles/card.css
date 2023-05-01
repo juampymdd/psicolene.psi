@@ -1,0 +1,40 @@
+.card {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0.7;
+  border-radius: 10px;
+  padding: 3rem;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  margin: 1rem;
+  height: 35rem;
+  overflow-y: scroll;
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) { 
+  .slider-container {
+    width: 60rem;
+    overflow: hidden;
+    
+  }
+  .card{
+    overflow-y: hidden;
+  }
+}
+@media (min-width: 400px) { 
+  
+}
+@media (min-width: 899px) { 
+  .slider-container {
+    margin-left: 20rem;
+  }
+}
+

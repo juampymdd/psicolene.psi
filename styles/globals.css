@@ -1,27 +1,272 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&family=Raleway:wght@300;400;700;900&family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Poppins:wght@100;400;600;800;900&display=swap');
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --bg-color: #ffcdb2;
+  --secondary: #ffb4a2;
+  --primary: #e5989b;
+  --warning: #b5838d;
+  --danger: #6d6875;
+  --success: #355070;
+  --info: #6c5b7b;
+  --light: #ffcdb2;
+  --dark: #3f3e3b;
+  --texto: #333;
+
+  --separacion: 5rem;
+    
+  --fuentePrincipal: 'Raleway', sans-serif;
+  --fuenteSecundaria: 'Poppins', sans-serif;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: var(--fuentePrincipal);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 0;
+  background: linear-gradient(90deg, #DDD6F3 0%, #FAACA8 100%);
+  background-image: url('../public/wave.svg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.wsp {
+  background-color: #0dc143;
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .2s ease all;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  z-index: 999999 !important;
+}
+
+.wsp:hover{
+  scale: 1.1;
+}
+
+.instagram-gradient {
+  /* background-image: linear-gradient(to right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5); */
+  background-image: linear-gradient(to bottom, #4f5bd5, #962fbf, #d62976, #fa7e1e, #feda75);
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: .2s ease all;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.instagram-gradient:hover{
+  scale: 1.1;
+}
+.texto-slider {
+  text-align: justify;
+  line-height: 1rem;
+  margin-top: 3rem;
+}
+
+.texto-slider h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--danger);
+  margin-bottom: 1rem;
+}
+
+.texto-slider a {
+  text-decoration: none;
+  color: var(--info);
+  font-weight: 800;
+}
+.flotante-izquierda{
+  position: fixed;
+  left: 20px; /* ajusta este valor para cambiar la posición del botón a la izquierda */
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:1rem; 
+}
+
+.flotante-derecha {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:1rem;
+}
+
+@media (min-width: 768px) { 
+}
+
+.flotante-derecha span{
+  color:#6d6875;
+  font-size: 1rem;
+}
+@media (min-width: 768px) { 
+  .flotante-derecha span{
+    color:#6d6875;
+    font-size: 5rem;
+  } 
+  
+}
+.flotante-derecha span{
+  color:#6d6875;
+  font-size: 1rem;
+} 
+
+.blink-1 {
+	-webkit-animation: blink-1 0.6s both;
+	animation: blink-1 0.6s both;
+}
+
+.bounce-left {
+	-webkit-animation: bounce-left 0.8s both;
+  animation: bounce-left 0.8s both;
+}
+
+.tracking-in-contract-bck-bottom {
+	-webkit-animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.text-pop-up-top {
+	-webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse both;
+	animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse both;
+}
+.text-blur-out {
+	-webkit-animation: text-blur-out 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-blur-out 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+.slide-in-bck-center {
+	-webkit-animation: slide-in-bck-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-bck-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+
+
+.container{
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+}
+.container:nth-child(1){
+  color: var(--danger);
+}
+
+@media (max-width: 768px) { 
+  body{
+    background-size: 170%;
+  }
+  .container{
+    grid-template-columns: unset;
+    grid-template-rows: .5fr 1fr;
+    justify-content: center;
+  }
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--danger);
+}
+
+.hero{
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+h1{
+  
+  font-size: 4.4rem;
+  font-weight: 600;
+  font-family: var(--fuenteSecundaria);
+  margin:0;
+}
+
+h3{
+  margin:0;
+  padding:0;
+  font-weight: 400;
+  font-family: var(--fuenteSecundaria);
+}
+
+.ilustracion-principal{
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (min-width: 768px) { 
+  .ilustracion-principal{
+  padding-right: 3rem;
+  }
+}
+/*
+h1, h2, h3 {
+  font-weight: 900;
+  font-family: var(--fuenteSecundaria);
+  margin: calc(var(--separacion) / 2) 0;
+}
+
+h1{
+  font-size: 4.4rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+*/
+img {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/**Utilidades **/
+
+.text-center {
+  text-align: center;
+}
+/* Degradados */
+
+.degradado-verde{
+  color: transparent;
+  background: linear-gradient(to right, var(--primario) 0%, var(--secundario) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.degradado-rosa{
+  color: transparent;
+  background: linear-gradient(to right, var(--secondary) 0%, var(--dark) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
